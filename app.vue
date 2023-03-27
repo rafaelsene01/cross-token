@@ -9,7 +9,7 @@ const { setCookies } = useCookies;
 onMounted(() => {
   const getLocalStorage = window.localStorage.getItem("localStorageTeste");
   if (getLocalStorage) setLocalStorage(getLocalStorage);
-  const getCookies = Cookies.get("cookiesTeste");
+  const getCookies = Cookies.get("cookiesTeste", { domain: ".rafaelsene.com" });
   if (getCookies) setCookies(getCookies);
 });
 </script>

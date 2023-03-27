@@ -5,7 +5,7 @@ function UseCookies() {
   const cookies = ref("");
   const setCookies = (value: string) => {
     cookies.value = value;
-    Cookies.set("cookiesTeste", value);
+    Cookies.set("cookiesTeste", value, { domain: ".rafaelsene.com" });
   };
 
   return {
